@@ -24,6 +24,14 @@
 
 #### Step 3: Modify 'terraform.tfvars' file
 
+* Create terraform.tfvars file
+
+```
+subnet_ids            = ["subnet-1-id", "subnet-2-id", "subnet-3-id"]
+
+security_group_ids    = ["security-group-id"]
+```
+
 #### Step 4: Run Terraform 
 
 ```
@@ -51,6 +59,11 @@ terraform apply --auto-approve
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 ```
 
+```
+sudo chmod +x ./kubectl
+sudo mv kubectl /bin/
+```
+
 * Check Version
 
 ```
@@ -63,6 +76,10 @@ kubectl version --short --client
 
 ```
 curl -o heptio-authenticator-aws https://amazon-eks.s3-us-west-2.amazonaws.com/1.10.3/2018-06-05/bin/linux/amd64/heptio-authenticator-aws
+```
+```
+sudo chmod +x ./heptio-authenticator-aws
+sudo mv heptio-authenticator-aws /bin/
 ```
 
 #### Step 7: Configure 'kubectl'

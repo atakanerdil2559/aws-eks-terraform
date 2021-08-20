@@ -2,7 +2,7 @@
 
 variable "cluster_name" {
     type    = string
-    default = "example"
+    default = "example-cluster"
 }
 
 variable "kubernetes_version" {
@@ -21,4 +21,5 @@ variable "security_group_ids" {
 
 variable "node_group_name" {
     type    = string
+    default = "example-node-group"
 }
