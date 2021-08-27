@@ -4,7 +4,7 @@ resource "aws_eks_cluster" "example" {
   version   = var.kubernetes_version
   vpc_config {
     subnet_ids          = var.subnet_ids
-    security_group_ids  = var.security_group_ids
+    security_group_ids  = ["${aws_security_group.example-cluster.id}"]
   }
 
   # Ensure that IAM Role permissions are created before and deleted after EKS Cluster handling.
