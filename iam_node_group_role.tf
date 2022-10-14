@@ -1,7 +1,7 @@
 ## EKS Node Group Role ###
 
 resource "aws_iam_role" "node_group_role" {
-  name = "eks-node-group-example"
+  name = "eks-node-group-example-v2"
 
   assume_role_policy = <<POLICY
 {

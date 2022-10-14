@@ -1,7 +1,7 @@
 ## EKS Cluster Role ###
 
 resource "aws_iam_role" "cluster_role" {
-  name = "eks-cluster-example"
+  name = "eks-cluster-example-v2"
 
   assume_role_policy = <<POLICY
 {
